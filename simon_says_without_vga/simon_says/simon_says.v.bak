@@ -1,0 +1,5 @@
+module simon_says (clk, rst, en, userGuess, roundNumb);
+input clk, rst;
+input en;
+input [1:0] userGuess;
+output reg [3:0] roundNumb;

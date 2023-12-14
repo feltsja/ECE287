@@ -1,0 +1,1250 @@
+TimeQuest Timing Analyzer report for simon_says
+Fri Dec 08 13:39:15 2023
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk'
+ 22. Slow 1200mV 0C Model Hold: 'clk'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk'
+ 30. Fast 1200mV 0C Model Hold: 'clk'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; simon_says                                          ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C7                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.4%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 224.42 MHz ; 224.42 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -3.456 ; -210.327           ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.387 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -306.260                         ;
++-------+--------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                       ;
++--------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node           ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
+; -3.456 ; timer[5]            ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.342      ; 4.796      ;
+; -3.453 ; timer[5]            ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.342      ; 4.793      ;
+; -3.449 ; timer[5]            ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.342      ; 4.789      ;
+; -3.445 ; timer[5]            ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.342      ; 4.785      ;
+; -3.348 ; difficulty_time[10] ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.343      ; 4.689      ;
+; -3.345 ; difficulty_time[10] ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.343      ; 4.686      ;
+; -3.341 ; difficulty_time[10] ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.343      ; 4.682      ;
+; -3.337 ; difficulty_time[10] ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.343      ; 4.678      ;
+; -3.143 ; S.FOR_COND_COUNT    ; pass                ; clk          ; clk         ; 1.000        ; -0.522     ; 3.619      ;
+; -3.095 ; timer[6]            ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.342      ; 4.435      ;
+; -3.092 ; timer[6]            ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.342      ; 4.432      ;
+; -3.088 ; timer[6]            ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.342      ; 4.428      ;
+; -3.084 ; timer[6]            ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.342      ; 4.424      ;
+; -3.080 ; timer[7]            ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.342      ; 4.420      ;
+; -3.077 ; timer[7]            ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.342      ; 4.417      ;
+; -3.073 ; timer[7]            ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.342      ; 4.413      ;
+; -3.069 ; timer[7]            ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.342      ; 4.409      ;
+; -3.067 ; count[1]            ; gameDisplay[2]~reg0 ; clk          ; clk         ; 1.000        ; 0.338      ; 4.403      ;
+; -3.020 ; S.FOR_COND_COUNT    ; timer[27]           ; clk          ; clk         ; 1.000        ; -0.509     ; 3.509      ;
+; -3.020 ; S.FOR_COND_COUNT    ; timer[26]           ; clk          ; clk         ; 1.000        ; -0.509     ; 3.509      ;
+; -3.020 ; S.FOR_COND_COUNT    ; timer[16]           ; clk          ; clk         ; 1.000        ; -0.509     ; 3.509      ;
+; -3.020 ; S.FOR_COND_COUNT    ; timer[14]           ; clk          ; clk         ; 1.000        ; -0.509     ; 3.509      ;
+; -3.020 ; S.FOR_COND_COUNT    ; timer[15]           ; clk          ; clk         ; 1.000        ; -0.509     ; 3.509      ;
+; -3.020 ; S.FOR_COND_COUNT    ; timer[18]           ; clk          ; clk         ; 1.000        ; -0.509     ; 3.509      ;
+; -3.020 ; S.FOR_COND_COUNT    ; timer[17]           ; clk          ; clk         ; 1.000        ; -0.509     ; 3.509      ;
+; -3.020 ; S.FOR_COND_COUNT    ; timer[19]           ; clk          ; clk         ; 1.000        ; -0.509     ; 3.509      ;
+; -3.020 ; S.FOR_COND_COUNT    ; timer[20]           ; clk          ; clk         ; 1.000        ; -0.509     ; 3.509      ;
+; -3.020 ; S.FOR_COND_COUNT    ; timer[24]           ; clk          ; clk         ; 1.000        ; -0.509     ; 3.509      ;
+; -3.020 ; S.FOR_COND_COUNT    ; timer[21]           ; clk          ; clk         ; 1.000        ; -0.509     ; 3.509      ;
+; -3.020 ; S.FOR_COND_COUNT    ; timer[22]           ; clk          ; clk         ; 1.000        ; -0.509     ; 3.509      ;
+; -3.020 ; S.FOR_COND_COUNT    ; timer[23]           ; clk          ; clk         ; 1.000        ; -0.509     ; 3.509      ;
+; -3.020 ; S.FOR_COND_COUNT    ; timer[25]           ; clk          ; clk         ; 1.000        ; -0.509     ; 3.509      ;
+; -3.005 ; S.FOR_COND_COUNT    ; timer[6]            ; clk          ; clk         ; 1.000        ; -0.517     ; 3.486      ;
+; -3.005 ; S.FOR_COND_COUNT    ; timer[2]            ; clk          ; clk         ; 1.000        ; -0.517     ; 3.486      ;
+; -3.005 ; S.FOR_COND_COUNT    ; timer[3]            ; clk          ; clk         ; 1.000        ; -0.517     ; 3.486      ;
+; -3.005 ; S.FOR_COND_COUNT    ; timer[5]            ; clk          ; clk         ; 1.000        ; -0.517     ; 3.486      ;
+; -3.005 ; S.FOR_COND_COUNT    ; timer[7]            ; clk          ; clk         ; 1.000        ; -0.517     ; 3.486      ;
+; -3.005 ; S.FOR_COND_COUNT    ; timer[9]            ; clk          ; clk         ; 1.000        ; -0.517     ; 3.486      ;
+; -3.005 ; S.FOR_COND_COUNT    ; timer[8]            ; clk          ; clk         ; 1.000        ; -0.517     ; 3.486      ;
+; -3.005 ; S.FOR_COND_COUNT    ; timer[10]           ; clk          ; clk         ; 1.000        ; -0.517     ; 3.486      ;
+; -3.005 ; S.FOR_COND_COUNT    ; timer[11]           ; clk          ; clk         ; 1.000        ; -0.517     ; 3.486      ;
+; -3.005 ; S.FOR_COND_COUNT    ; timer[12]           ; clk          ; clk         ; 1.000        ; -0.517     ; 3.486      ;
+; -2.984 ; count2[1]           ; pass                ; clk          ; clk         ; 1.000        ; -0.084     ; 3.898      ;
+; -2.981 ; count[1]            ; gameDisplay[0]~reg0 ; clk          ; clk         ; 1.000        ; 0.335      ; 4.314      ;
+; -2.979 ; count2[3]           ; pass                ; clk          ; clk         ; 1.000        ; -0.084     ; 3.893      ;
+; -2.955 ; S.FOR_COND_COUNT    ; gameDisplay[1]~reg0 ; clk          ; clk         ; 1.000        ; -0.110     ; 3.843      ;
+; -2.908 ; round6Display[0]    ; pass                ; clk          ; clk         ; 1.000        ; -0.076     ; 3.830      ;
+; -2.900 ; count[2]            ; gameDisplay[2]~reg0 ; clk          ; clk         ; 1.000        ; 0.338      ; 4.236      ;
+; -2.856 ; difficulty_time[6]  ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.343      ; 4.197      ;
+; -2.854 ; count[2]            ; gameDisplay[0]~reg0 ; clk          ; clk         ; 1.000        ; 0.335      ; 4.187      ;
+; -2.853 ; difficulty_time[6]  ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.343      ; 4.194      ;
+; -2.849 ; difficulty_time[6]  ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.343      ; 4.190      ;
+; -2.845 ; difficulty_time[6]  ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.343      ; 4.186      ;
+; -2.832 ; timer[0]            ; timer[27]           ; clk          ; clk         ; 1.000        ; -0.504     ; 3.326      ;
+; -2.823 ; count2[2]           ; pass                ; clk          ; clk         ; 1.000        ; -0.084     ; 3.737      ;
+; -2.821 ; count2[0]           ; pass                ; clk          ; clk         ; 1.000        ; -0.084     ; 3.735      ;
+; -2.817 ; timer[1]            ; timer[26]           ; clk          ; clk         ; 1.000        ; -0.504     ; 3.311      ;
+; -2.801 ; count[0]            ; gameDisplay[1]~reg0 ; clk          ; clk         ; 1.000        ; 0.337      ; 4.136      ;
+; -2.798 ; timer[1]            ; timer[27]           ; clk          ; clk         ; 1.000        ; -0.504     ; 3.292      ;
+; -2.797 ; timer[25]           ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.334      ; 4.129      ;
+; -2.797 ; timer[25]           ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.334      ; 4.129      ;
+; -2.794 ; timer[25]           ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.334      ; 4.126      ;
+; -2.793 ; timer[25]           ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.334      ; 4.125      ;
+; -2.784 ; round4Display[1]    ; gameDisplay[2]~reg0 ; clk          ; clk         ; 1.000        ; 0.337      ; 4.119      ;
+; -2.784 ; round4Display[1]    ; pass                ; clk          ; clk         ; 1.000        ; -0.076     ; 3.706      ;
+; -2.781 ; difficulty_time[25] ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.343      ; 4.122      ;
+; -2.781 ; difficulty_time[25] ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.343      ; 4.122      ;
+; -2.778 ; difficulty_time[25] ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.343      ; 4.119      ;
+; -2.777 ; difficulty_time[25] ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.343      ; 4.118      ;
+; -2.766 ; round5Display[0]    ; pass                ; clk          ; clk         ; 1.000        ; -0.076     ; 3.688      ;
+; -2.739 ; S.FOR_COND_COUNT    ; count[3]            ; clk          ; clk         ; 1.000        ; -0.525     ; 3.212      ;
+; -2.736 ; S.FOR_COND_COUNT    ; count[1]            ; clk          ; clk         ; 1.000        ; -0.525     ; 3.209      ;
+; -2.735 ; S.FOR_COND_COUNT    ; count[2]            ; clk          ; clk         ; 1.000        ; -0.525     ; 3.208      ;
+; -2.734 ; round4Display[0]    ; pass                ; clk          ; clk         ; 1.000        ; -0.076     ; 3.656      ;
+; -2.730 ; timer[0]            ; timer[26]           ; clk          ; clk         ; 1.000        ; -0.504     ; 3.224      ;
+; -2.722 ; timer[9]            ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.342      ; 4.062      ;
+; -2.719 ; timer[9]            ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.342      ; 4.059      ;
+; -2.716 ; roundNumb[0]~reg0   ; S.ROUND_INCR        ; clk          ; clk         ; 1.000        ; -0.070     ; 3.644      ;
+; -2.715 ; timer[9]            ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.342      ; 4.055      ;
+; -2.714 ; difficulty_time[16] ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.343      ; 4.055      ;
+; -2.714 ; difficulty_time[16] ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.343      ; 4.055      ;
+; -2.711 ; timer[9]            ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.342      ; 4.051      ;
+; -2.711 ; difficulty_time[16] ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.343      ; 4.052      ;
+; -2.710 ; difficulty_time[16] ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.343      ; 4.051      ;
+; -2.705 ; timer[22]           ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.334      ; 4.037      ;
+; -2.705 ; timer[22]           ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.334      ; 4.037      ;
+; -2.704 ; count[0]            ; gameDisplay[0]~reg0 ; clk          ; clk         ; 1.000        ; 0.335      ; 4.037      ;
+; -2.702 ; timer[22]           ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.334      ; 4.034      ;
+; -2.702 ; round4Display[0]    ; gameDisplay[0]~reg0 ; clk          ; clk         ; 1.000        ; 0.334      ; 4.034      ;
+; -2.701 ; timer[22]           ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.334      ; 4.033      ;
+; -2.700 ; timer[0]            ; timer[25]           ; clk          ; clk         ; 1.000        ; -0.504     ; 3.194      ;
+; -2.689 ; timer[8]            ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.342      ; 4.029      ;
+; -2.686 ; timer[8]            ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.342      ; 4.026      ;
+; -2.685 ; timer[1]            ; timer[24]           ; clk          ; clk         ; 1.000        ; -0.504     ; 3.179      ;
+; -2.682 ; timer[8]            ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.342      ; 4.022      ;
+; -2.682 ; S.FOR_COND_COUNT    ; gameDisplay[2]~reg0 ; clk          ; clk         ; 1.000        ; -0.109     ; 3.571      ;
+; -2.678 ; timer[8]            ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.342      ; 4.018      ;
+; -2.671 ; difficulty_time[14] ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.335      ; 4.004      ;
+; -2.671 ; difficulty_time[14] ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.335      ; 4.004      ;
+; -2.668 ; difficulty_time[14] ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.335      ; 4.001      ;
++--------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                                     ;
++-------+----------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                              ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.387 ; gameDisplay[2]~reg0                    ; gameDisplay[2]~reg0                            ; clk          ; clk         ; 0.000        ; 0.096      ; 0.669      ;
+; 0.387 ; S.DELAY_OFF                            ; S.DELAY_OFF                                    ; clk          ; clk         ; 0.000        ; 0.096      ; 0.669      ;
+; 0.387 ; S.DELAY                                ; S.DELAY                                        ; clk          ; clk         ; 0.000        ; 0.096      ; 0.669      ;
+; 0.388 ; gameDisplay[0]~reg0                    ; gameDisplay[0]~reg0                            ; clk          ; clk         ; 0.000        ; 0.095      ; 0.669      ;
+; 0.404 ; count2[3]                              ; count2[3]                                      ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.404 ; count2[1]                              ; count2[1]                                      ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.404 ; count2[0]                              ; count2[0]                                      ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.404 ; count2[2]                              ; count2[2]                                      ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.404 ; roundNumb[2]~reg0                      ; roundNumb[2]~reg0                              ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.404 ; roundNumb[3]~reg0                      ; roundNumb[3]~reg0                              ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.404 ; roundNumb[0]~reg0                      ; roundNumb[0]~reg0                              ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.404 ; roundNumb[1]~reg0                      ; roundNumb[1]~reg0                              ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.404 ; S.ROUND_BEGIN                          ; S.ROUND_BEGIN                                  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.405 ; done~reg0                              ; done~reg0                                      ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; S.GUESS_CHECK                          ; S.GUESS_CHECK                                  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; S.MAKE_GUESS                           ; S.MAKE_GUESS                                   ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; count[0]                               ; count[0]                                       ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; count[3]                               ; count[3]                                       ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; count[1]                               ; count[1]                                       ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; count[2]                               ; count[2]                                       ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; S.INIT                                 ; S.INIT                                         ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.405 ; S.START                                ; S.START                                        ; clk          ; clk         ; 0.000        ; 0.078      ; 0.669      ;
+; 0.429 ; random_number_generator:rand|lfsr[43]  ; random_number_generator:rand|lfsr[44]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.694      ;
+; 0.430 ; random_number_generator:rand|lfsr[63]  ; random_number_generator:rand|random_number[4]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.696      ;
+; 0.432 ; random_number_generator:rand|lfsr[0]   ; random_number_generator:rand|lfsr[1]           ; clk          ; clk         ; 0.000        ; 0.079      ; 0.697      ;
+; 0.438 ; random_number_generator:rand|lfsr[60]  ; random_number_generator:rand|random_number[1]  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.703      ;
+; 0.438 ; random_number_generator:rand|lfsr[75]  ; random_number_generator:rand|random_number[16] ; clk          ; clk         ; 0.000        ; 0.078      ; 0.702      ;
+; 0.439 ; random_number_generator:rand|lfsr[69]  ; random_number_generator:rand|random_number[10] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.704      ;
+; 0.439 ; random_number_generator:rand|lfsr[68]  ; random_number_generator:rand|random_number[9]  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.704      ;
+; 0.439 ; random_number_generator:rand|lfsr[65]  ; random_number_generator:rand|random_number[6]  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.704      ;
+; 0.440 ; random_number_generator:rand|lfsr[70]  ; random_number_generator:rand|random_number[11] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.705      ;
+; 0.440 ; random_number_generator:rand|lfsr[78]  ; random_number_generator:rand|random_number[19] ; clk          ; clk         ; 0.000        ; 0.078      ; 0.704      ;
+; 0.441 ; random_number_generator:rand|lfsr[77]  ; random_number_generator:rand|random_number[18] ; clk          ; clk         ; 0.000        ; 0.078      ; 0.705      ;
+; 0.441 ; random_number_generator:rand|lfsr[76]  ; random_number_generator:rand|random_number[17] ; clk          ; clk         ; 0.000        ; 0.078      ; 0.705      ;
+; 0.441 ; random_number_generator:rand|lfsr[74]  ; random_number_generator:rand|random_number[15] ; clk          ; clk         ; 0.000        ; 0.078      ; 0.705      ;
+; 0.442 ; random_number_generator:rand|lfsr[73]  ; random_number_generator:rand|random_number[14] ; clk          ; clk         ; 0.000        ; 0.078      ; 0.706      ;
+; 0.454 ; random_number_generator:rand|lfsr[61]  ; random_number_generator:rand|random_number[2]  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.719      ;
+; 0.455 ; random_number_generator:rand|lfsr[62]  ; random_number_generator:rand|random_number[3]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.719      ;
+; 0.471 ; S.RESET                                ; done~reg0                                      ; clk          ; clk         ; 0.000        ; 0.078      ; 0.735      ;
+; 0.520 ; timer[3]                               ; timer[4]                                       ; clk          ; clk         ; 0.000        ; 0.512      ; 1.218      ;
+; 0.537 ; S.DELAY                                ; S.DISPLAY_OFF                                  ; clk          ; clk         ; 0.000        ; 0.096      ; 0.819      ;
+; 0.539 ; timer[2]                               ; timer[4]                                       ; clk          ; clk         ; 0.000        ; 0.512      ; 1.237      ;
+; 0.548 ; random_number_generator:rand|lfsr[1]   ; random_number_generator:rand|lfsr[2]           ; clk          ; clk         ; 0.000        ; 0.079      ; 0.813      ;
+; 0.549 ; random_number_generator:rand|lfsr[4]   ; random_number_generator:rand|lfsr[5]           ; clk          ; clk         ; 0.000        ; 0.079      ; 0.814      ;
+; 0.553 ; random_number_generator:rand|lfsr[25]  ; random_number_generator:rand|lfsr[26]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.819      ;
+; 0.553 ; random_number_generator:rand|lfsr[22]  ; random_number_generator:rand|lfsr[23]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.819      ;
+; 0.553 ; random_number_generator:rand|lfsr[20]  ; random_number_generator:rand|lfsr[21]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.819      ;
+; 0.553 ; random_number_generator:rand|lfsr[117] ; random_number_generator:rand|lfsr[118]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.819      ;
+; 0.553 ; random_number_generator:rand|lfsr[86]  ; random_number_generator:rand|lfsr[87]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.819      ;
+; 0.554 ; random_number_generator:rand|lfsr[44]  ; random_number_generator:rand|lfsr[45]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; random_number_generator:rand|lfsr[41]  ; random_number_generator:rand|lfsr[42]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; random_number_generator:rand|lfsr[36]  ; random_number_generator:rand|lfsr[37]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; random_number_generator:rand|lfsr[33]  ; random_number_generator:rand|lfsr[34]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; random_number_generator:rand|lfsr[32]  ; random_number_generator:rand|lfsr[33]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; random_number_generator:rand|lfsr[29]  ; random_number_generator:rand|lfsr[30]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.820      ;
+; 0.554 ; random_number_generator:rand|lfsr[18]  ; random_number_generator:rand|lfsr[19]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.820      ;
+; 0.554 ; random_number_generator:rand|lfsr[16]  ; random_number_generator:rand|lfsr[17]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.820      ;
+; 0.554 ; random_number_generator:rand|lfsr[106] ; random_number_generator:rand|lfsr[107]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.820      ;
+; 0.554 ; random_number_generator:rand|lfsr[104] ; random_number_generator:rand|lfsr[105]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.820      ;
+; 0.554 ; random_number_generator:rand|lfsr[101] ; random_number_generator:rand|lfsr[102]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.820      ;
+; 0.554 ; random_number_generator:rand|lfsr[98]  ; random_number_generator:rand|lfsr[99]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; random_number_generator:rand|lfsr[90]  ; random_number_generator:rand|lfsr[91]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; random_number_generator:rand|lfsr[82]  ; random_number_generator:rand|lfsr[83]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.820      ;
+; 0.555 ; timer[12]                              ; timer[13]                                      ; clk          ; clk         ; 0.000        ; 0.512      ; 1.253      ;
+; 0.555 ; random_number_generator:rand|lfsr[54]  ; random_number_generator:rand|lfsr[55]          ; clk          ; clk         ; 0.000        ; 0.078      ; 0.819      ;
+; 0.555 ; random_number_generator:rand|lfsr[49]  ; random_number_generator:rand|lfsr[50]          ; clk          ; clk         ; 0.000        ; 0.078      ; 0.819      ;
+; 0.555 ; random_number_generator:rand|lfsr[38]  ; random_number_generator:rand|lfsr[39]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; random_number_generator:rand|lfsr[15]  ; random_number_generator:rand|lfsr[16]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.821      ;
+; 0.555 ; random_number_generator:rand|lfsr[100] ; random_number_generator:rand|lfsr[101]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.821      ;
+; 0.556 ; random_number_generator:rand|lfsr[48]  ; random_number_generator:rand|lfsr[49]          ; clk          ; clk         ; 0.000        ; 0.078      ; 0.820      ;
+; 0.556 ; random_number_generator:rand|lfsr[40]  ; random_number_generator:rand|lfsr[41]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.821      ;
+; 0.556 ; random_number_generator:rand|lfsr[24]  ; random_number_generator:rand|lfsr[25]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.822      ;
+; 0.556 ; random_number_generator:rand|lfsr[19]  ; random_number_generator:rand|lfsr[20]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.822      ;
+; 0.556 ; random_number_generator:rand|lfsr[103] ; random_number_generator:rand|lfsr[104]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.822      ;
+; 0.556 ; random_number_generator:rand|lfsr[85]  ; random_number_generator:rand|lfsr[86]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.822      ;
+; 0.556 ; random_number_generator:rand|lfsr[84]  ; random_number_generator:rand|lfsr[85]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.822      ;
+; 0.557 ; random_number_generator:rand|lfsr[96]  ; random_number_generator:rand|lfsr[97]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.822      ;
+; 0.557 ; random_number_generator:rand|lfsr[80]  ; random_number_generator:rand|lfsr[81]          ; clk          ; clk         ; 0.000        ; 0.078      ; 0.821      ;
+; 0.557 ; random_number_generator:rand|lfsr[79]  ; random_number_generator:rand|lfsr[80]          ; clk          ; clk         ; 0.000        ; 0.078      ; 0.821      ;
+; 0.558 ; random_number_generator:rand|lfsr[46]  ; random_number_generator:rand|lfsr[47]          ; clk          ; clk         ; 0.000        ; 0.078      ; 0.822      ;
+; 0.563 ; random_number_generator:rand|lfsr[67]  ; random_number_generator:rand|lfsr[68]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.828      ;
+; 0.563 ; random_number_generator:rand|lfsr[71]  ; random_number_generator:rand|lfsr[72]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.828      ;
+; 0.564 ; random_number_generator:rand|lfsr[66]  ; random_number_generator:rand|lfsr[67]          ; clk          ; clk         ; 0.000        ; 0.079      ; 0.829      ;
+; 0.586 ; count2[3]                              ; S.ROUND_INCR                                   ; clk          ; clk         ; 0.000        ; 0.079      ; 0.851      ;
+; 0.608 ; random_number_generator:rand|lfsr[67]  ; random_number_generator:rand|random_number[8]  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.873      ;
+; 0.609 ; random_number_generator:rand|lfsr[66]  ; random_number_generator:rand|random_number[7]  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.874      ;
+; 0.612 ; random_number_generator:rand|lfsr[71]  ; random_number_generator:rand|random_number[12] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.877      ;
+; 0.617 ; timer[1]                               ; timer[1]                                       ; clk          ; clk         ; 0.000        ; 0.096      ; 0.899      ;
+; 0.620 ; timer[4]                               ; timer[4]                                       ; clk          ; clk         ; 0.000        ; 0.096      ; 0.902      ;
+; 0.627 ; S.DELAY_OFF                            ; S.FOR_COND_COUNT                               ; clk          ; clk         ; 0.000        ; 0.096      ; 0.909      ;
+; 0.630 ; random_number_generator:rand|lfsr[59]  ; random_number_generator:rand|random_number[0]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.894      ;
+; 0.635 ; timer[3]                               ; timer[3]                                       ; clk          ; clk         ; 0.000        ; 0.079      ; 0.900      ;
+; 0.637 ; random_number_generator:rand|lfsr[14]  ; random_number_generator:rand|lfsr[15]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.903      ;
+; 0.637 ; random_number_generator:rand|lfsr[13]  ; random_number_generator:rand|lfsr[14]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.903      ;
+; 0.637 ; random_number_generator:rand|lfsr[8]   ; random_number_generator:rand|lfsr[9]           ; clk          ; clk         ; 0.000        ; 0.080      ; 0.903      ;
+; 0.637 ; random_number_generator:rand|lfsr[115] ; random_number_generator:rand|lfsr[116]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.903      ;
+; 0.637 ; random_number_generator:rand|lfsr[114] ; random_number_generator:rand|lfsr[115]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.903      ;
+; 0.637 ; random_number_generator:rand|lfsr[105] ; random_number_generator:rand|lfsr[106]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.903      ;
+; 0.638 ; random_number_generator:rand|lfsr[21]  ; random_number_generator:rand|lfsr[22]          ; clk          ; clk         ; 0.000        ; 0.080      ; 0.904      ;
+; 0.638 ; random_number_generator:rand|lfsr[124] ; random_number_generator:rand|lfsr[125]         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.904      ;
++-------+----------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 245.22 MHz ; 245.22 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -3.078 ; -174.177          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.340 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -306.260                        ;
++-------+--------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                        ;
++--------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node           ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
+; -3.078 ; timer[5]            ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.317      ; 4.394      ;
+; -3.075 ; timer[5]            ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.317      ; 4.391      ;
+; -3.064 ; timer[5]            ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.317      ; 4.380      ;
+; -3.061 ; timer[5]            ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.317      ; 4.377      ;
+; -3.020 ; difficulty_time[10] ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.317      ; 4.336      ;
+; -3.017 ; difficulty_time[10] ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.317      ; 4.333      ;
+; -3.006 ; difficulty_time[10] ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.317      ; 4.322      ;
+; -3.003 ; difficulty_time[10] ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.317      ; 4.319      ;
+; -2.766 ; S.FOR_COND_COUNT    ; pass                ; clk          ; clk         ; 1.000        ; -0.479     ; 3.286      ;
+; -2.761 ; timer[6]            ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.317      ; 4.077      ;
+; -2.758 ; timer[6]            ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.317      ; 4.074      ;
+; -2.747 ; timer[6]            ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.317      ; 4.063      ;
+; -2.744 ; timer[6]            ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.317      ; 4.060      ;
+; -2.733 ; timer[7]            ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.317      ; 4.049      ;
+; -2.730 ; timer[7]            ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.317      ; 4.046      ;
+; -2.719 ; timer[7]            ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.317      ; 4.035      ;
+; -2.716 ; timer[7]            ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.317      ; 4.032      ;
+; -2.695 ; count[1]            ; gameDisplay[2]~reg0 ; clk          ; clk         ; 1.000        ; 0.314      ; 4.008      ;
+; -2.670 ; S.FOR_COND_COUNT    ; gameDisplay[1]~reg0 ; clk          ; clk         ; 1.000        ; -0.101     ; 3.568      ;
+; -2.670 ; S.FOR_COND_COUNT    ; timer[27]           ; clk          ; clk         ; 1.000        ; -0.466     ; 3.203      ;
+; -2.670 ; S.FOR_COND_COUNT    ; timer[26]           ; clk          ; clk         ; 1.000        ; -0.466     ; 3.203      ;
+; -2.670 ; S.FOR_COND_COUNT    ; timer[16]           ; clk          ; clk         ; 1.000        ; -0.466     ; 3.203      ;
+; -2.670 ; S.FOR_COND_COUNT    ; timer[14]           ; clk          ; clk         ; 1.000        ; -0.466     ; 3.203      ;
+; -2.670 ; S.FOR_COND_COUNT    ; timer[15]           ; clk          ; clk         ; 1.000        ; -0.466     ; 3.203      ;
+; -2.670 ; S.FOR_COND_COUNT    ; timer[18]           ; clk          ; clk         ; 1.000        ; -0.466     ; 3.203      ;
+; -2.670 ; S.FOR_COND_COUNT    ; timer[17]           ; clk          ; clk         ; 1.000        ; -0.466     ; 3.203      ;
+; -2.670 ; S.FOR_COND_COUNT    ; timer[19]           ; clk          ; clk         ; 1.000        ; -0.466     ; 3.203      ;
+; -2.670 ; S.FOR_COND_COUNT    ; timer[20]           ; clk          ; clk         ; 1.000        ; -0.466     ; 3.203      ;
+; -2.670 ; S.FOR_COND_COUNT    ; timer[24]           ; clk          ; clk         ; 1.000        ; -0.466     ; 3.203      ;
+; -2.670 ; S.FOR_COND_COUNT    ; timer[21]           ; clk          ; clk         ; 1.000        ; -0.466     ; 3.203      ;
+; -2.670 ; S.FOR_COND_COUNT    ; timer[22]           ; clk          ; clk         ; 1.000        ; -0.466     ; 3.203      ;
+; -2.670 ; S.FOR_COND_COUNT    ; timer[23]           ; clk          ; clk         ; 1.000        ; -0.466     ; 3.203      ;
+; -2.670 ; S.FOR_COND_COUNT    ; timer[25]           ; clk          ; clk         ; 1.000        ; -0.466     ; 3.203      ;
+; -2.657 ; S.FOR_COND_COUNT    ; timer[6]            ; clk          ; clk         ; 1.000        ; -0.473     ; 3.183      ;
+; -2.657 ; S.FOR_COND_COUNT    ; timer[2]            ; clk          ; clk         ; 1.000        ; -0.473     ; 3.183      ;
+; -2.657 ; S.FOR_COND_COUNT    ; timer[3]            ; clk          ; clk         ; 1.000        ; -0.473     ; 3.183      ;
+; -2.657 ; S.FOR_COND_COUNT    ; timer[5]            ; clk          ; clk         ; 1.000        ; -0.473     ; 3.183      ;
+; -2.657 ; S.FOR_COND_COUNT    ; timer[7]            ; clk          ; clk         ; 1.000        ; -0.473     ; 3.183      ;
+; -2.657 ; S.FOR_COND_COUNT    ; timer[9]            ; clk          ; clk         ; 1.000        ; -0.473     ; 3.183      ;
+; -2.657 ; S.FOR_COND_COUNT    ; timer[8]            ; clk          ; clk         ; 1.000        ; -0.473     ; 3.183      ;
+; -2.657 ; S.FOR_COND_COUNT    ; timer[10]           ; clk          ; clk         ; 1.000        ; -0.473     ; 3.183      ;
+; -2.657 ; S.FOR_COND_COUNT    ; timer[11]           ; clk          ; clk         ; 1.000        ; -0.473     ; 3.183      ;
+; -2.657 ; S.FOR_COND_COUNT    ; timer[12]           ; clk          ; clk         ; 1.000        ; -0.473     ; 3.183      ;
+; -2.650 ; count2[1]           ; pass                ; clk          ; clk         ; 1.000        ; -0.076     ; 3.573      ;
+; -2.634 ; count[1]            ; gameDisplay[0]~reg0 ; clk          ; clk         ; 1.000        ; 0.310      ; 3.943      ;
+; -2.593 ; count[2]            ; gameDisplay[2]~reg0 ; clk          ; clk         ; 1.000        ; 0.314      ; 3.906      ;
+; -2.566 ; round6Display[0]    ; pass                ; clk          ; clk         ; 1.000        ; -0.067     ; 3.498      ;
+; -2.565 ; count2[3]           ; pass                ; clk          ; clk         ; 1.000        ; -0.076     ; 3.488      ;
+; -2.549 ; difficulty_time[6]  ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.317      ; 3.865      ;
+; -2.546 ; difficulty_time[6]  ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.317      ; 3.862      ;
+; -2.535 ; difficulty_time[6]  ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.317      ; 3.851      ;
+; -2.535 ; count[2]            ; gameDisplay[0]~reg0 ; clk          ; clk         ; 1.000        ; 0.310      ; 3.844      ;
+; -2.532 ; difficulty_time[6]  ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.317      ; 3.848      ;
+; -2.485 ; count2[0]           ; pass                ; clk          ; clk         ; 1.000        ; -0.076     ; 3.408      ;
+; -2.483 ; count[0]            ; gameDisplay[1]~reg0 ; clk          ; clk         ; 1.000        ; 0.312      ; 3.794      ;
+; -2.462 ; round4Display[1]    ; pass                ; clk          ; clk         ; 1.000        ; -0.067     ; 3.394      ;
+; -2.460 ; round4Display[1]    ; gameDisplay[2]~reg0 ; clk          ; clk         ; 1.000        ; 0.313      ; 3.772      ;
+; -2.460 ; round5Display[0]    ; pass                ; clk          ; clk         ; 1.000        ; -0.067     ; 3.392      ;
+; -2.447 ; S.FOR_COND_COUNT    ; count[3]            ; clk          ; clk         ; 1.000        ; -0.482     ; 2.964      ;
+; -2.444 ; S.FOR_COND_COUNT    ; count[1]            ; clk          ; clk         ; 1.000        ; -0.482     ; 2.961      ;
+; -2.443 ; S.FOR_COND_COUNT    ; count[2]            ; clk          ; clk         ; 1.000        ; -0.482     ; 2.960      ;
+; -2.443 ; round4Display[0]    ; gameDisplay[0]~reg0 ; clk          ; clk         ; 1.000        ; 0.309      ; 3.751      ;
+; -2.437 ; count2[2]           ; pass                ; clk          ; clk         ; 1.000        ; -0.076     ; 3.360      ;
+; -2.431 ; count[0]            ; gameDisplay[0]~reg0 ; clk          ; clk         ; 1.000        ; 0.310      ; 3.740      ;
+; -2.427 ; timer[0]            ; timer[27]           ; clk          ; clk         ; 1.000        ; -0.462     ; 2.964      ;
+; -2.409 ; round4Display[0]    ; pass                ; clk          ; clk         ; 1.000        ; -0.067     ; 3.341      ;
+; -2.409 ; round6Display[0]    ; gameDisplay[0]~reg0 ; clk          ; clk         ; 1.000        ; 0.309      ; 3.717      ;
+; -2.404 ; timer[1]            ; timer[26]           ; clk          ; clk         ; 1.000        ; -0.462     ; 2.941      ;
+; -2.402 ; roundNumb[0]~reg0   ; S.ROUND_INCR        ; clk          ; clk         ; 1.000        ; -0.059     ; 3.342      ;
+; -2.402 ; timer[9]            ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.317      ; 3.718      ;
+; -2.402 ; timer[25]           ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.309      ; 3.710      ;
+; -2.399 ; timer[9]            ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.317      ; 3.715      ;
+; -2.398 ; timer[25]           ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.309      ; 3.706      ;
+; -2.392 ; timer[25]           ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.309      ; 3.700      ;
+; -2.390 ; timer[25]           ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.309      ; 3.698      ;
+; -2.388 ; timer[9]            ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.317      ; 3.704      ;
+; -2.388 ; difficulty_time[25] ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.317      ; 3.704      ;
+; -2.385 ; timer[9]            ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.317      ; 3.701      ;
+; -2.384 ; difficulty_time[25] ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.317      ; 3.700      ;
+; -2.378 ; difficulty_time[25] ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.317      ; 3.694      ;
+; -2.376 ; difficulty_time[25] ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.317      ; 3.692      ;
+; -2.375 ; timer[8]            ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.317      ; 3.691      ;
+; -2.375 ; timer[1]            ; timer[27]           ; clk          ; clk         ; 1.000        ; -0.462     ; 2.912      ;
+; -2.374 ; round6Display[1]    ; pass                ; clk          ; clk         ; 1.000        ; -0.067     ; 3.306      ;
+; -2.372 ; timer[8]            ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.317      ; 3.688      ;
+; -2.371 ; S.FOR_COND_COUNT    ; gameDisplay[2]~reg0 ; clk          ; clk         ; 1.000        ; -0.099     ; 3.271      ;
+; -2.361 ; timer[8]            ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.317      ; 3.677      ;
+; -2.358 ; timer[8]            ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.317      ; 3.674      ;
+; -2.357 ; difficulty_time[16] ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.317      ; 3.673      ;
+; -2.354 ; difficulty_time[16] ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.317      ; 3.670      ;
+; -2.344 ; difficulty_time[16] ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.317      ; 3.660      ;
+; -2.340 ; difficulty_time[16] ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.317      ; 3.656      ;
+; -2.335 ; roundNumb[0]~reg0   ; S.MAKE_GUESS        ; clk          ; clk         ; 1.000        ; -0.059     ; 3.275      ;
+; -2.335 ; timer[22]           ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.309      ; 3.643      ;
+; -2.331 ; timer[22]           ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.309      ; 3.639      ;
+; -2.329 ; difficulty_time[14] ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.310      ; 3.638      ;
+; -2.328 ; timer[0]            ; timer[26]           ; clk          ; clk         ; 1.000        ; -0.462     ; 2.865      ;
+; -2.326 ; difficulty_time[14] ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.310      ; 3.635      ;
+; -2.325 ; timer[22]           ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.309      ; 3.633      ;
+; -2.323 ; timer[22]           ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.309      ; 3.631      ;
++--------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                                      ;
++-------+----------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                              ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.340 ; gameDisplay[2]~reg0                    ; gameDisplay[2]~reg0                            ; clk          ; clk         ; 0.000        ; 0.086      ; 0.597      ;
+; 0.340 ; gameDisplay[0]~reg0                    ; gameDisplay[0]~reg0                            ; clk          ; clk         ; 0.000        ; 0.086      ; 0.597      ;
+; 0.340 ; S.DELAY_OFF                            ; S.DELAY_OFF                                    ; clk          ; clk         ; 0.000        ; 0.086      ; 0.597      ;
+; 0.340 ; S.DELAY                                ; S.DELAY                                        ; clk          ; clk         ; 0.000        ; 0.086      ; 0.597      ;
+; 0.356 ; done~reg0                              ; done~reg0                                      ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; S.GUESS_CHECK                          ; S.GUESS_CHECK                                  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; S.MAKE_GUESS                           ; S.MAKE_GUESS                                   ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; count2[3]                              ; count2[3]                                      ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; count2[1]                              ; count2[1]                                      ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; count2[0]                              ; count2[0]                                      ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; count2[2]                              ; count2[2]                                      ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; S.INIT                                 ; S.INIT                                         ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; S.START                                ; S.START                                        ; clk          ; clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.357 ; count[0]                               ; count[0]                                       ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; count[3]                               ; count[3]                                       ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; count[1]                               ; count[1]                                       ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; count[2]                               ; count[2]                                       ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; roundNumb[2]~reg0                      ; roundNumb[2]~reg0                              ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; roundNumb[3]~reg0                      ; roundNumb[3]~reg0                              ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; roundNumb[0]~reg0                      ; roundNumb[0]~reg0                              ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; roundNumb[1]~reg0                      ; roundNumb[1]~reg0                              ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.357 ; S.ROUND_BEGIN                          ; S.ROUND_BEGIN                                  ; clk          ; clk         ; 0.000        ; 0.069      ; 0.597      ;
+; 0.391 ; random_number_generator:rand|lfsr[0]   ; random_number_generator:rand|lfsr[1]           ; clk          ; clk         ; 0.000        ; 0.071      ; 0.633      ;
+; 0.397 ; random_number_generator:rand|lfsr[43]  ; random_number_generator:rand|lfsr[44]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.638      ;
+; 0.398 ; random_number_generator:rand|lfsr[63]  ; random_number_generator:rand|random_number[4]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.639      ;
+; 0.405 ; random_number_generator:rand|lfsr[60]  ; random_number_generator:rand|random_number[1]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.646      ;
+; 0.405 ; random_number_generator:rand|lfsr[78]  ; random_number_generator:rand|random_number[19] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.646      ;
+; 0.405 ; random_number_generator:rand|lfsr[75]  ; random_number_generator:rand|random_number[16] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.646      ;
+; 0.406 ; random_number_generator:rand|lfsr[69]  ; random_number_generator:rand|random_number[10] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.647      ;
+; 0.406 ; random_number_generator:rand|lfsr[68]  ; random_number_generator:rand|random_number[9]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.647      ;
+; 0.406 ; random_number_generator:rand|lfsr[65]  ; random_number_generator:rand|random_number[6]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.647      ;
+; 0.406 ; random_number_generator:rand|lfsr[77]  ; random_number_generator:rand|random_number[18] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.647      ;
+; 0.406 ; random_number_generator:rand|lfsr[76]  ; random_number_generator:rand|random_number[17] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.647      ;
+; 0.406 ; random_number_generator:rand|lfsr[74]  ; random_number_generator:rand|random_number[15] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.647      ;
+; 0.407 ; random_number_generator:rand|lfsr[70]  ; random_number_generator:rand|random_number[11] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.648      ;
+; 0.408 ; random_number_generator:rand|lfsr[73]  ; random_number_generator:rand|random_number[14] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.649      ;
+; 0.419 ; random_number_generator:rand|lfsr[62]  ; random_number_generator:rand|random_number[3]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.660      ;
+; 0.420 ; random_number_generator:rand|lfsr[61]  ; random_number_generator:rand|random_number[2]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.661      ;
+; 0.436 ; S.RESET                                ; done~reg0                                      ; clk          ; clk         ; 0.000        ; 0.070      ; 0.677      ;
+; 0.468 ; timer[3]                               ; timer[4]                                       ; clk          ; clk         ; 0.000        ; 0.469      ; 1.108      ;
+; 0.486 ; timer[2]                               ; timer[4]                                       ; clk          ; clk         ; 0.000        ; 0.469      ; 1.126      ;
+; 0.492 ; S.DELAY                                ; S.DISPLAY_OFF                                  ; clk          ; clk         ; 0.000        ; 0.086      ; 0.749      ;
+; 0.494 ; timer[12]                              ; timer[13]                                      ; clk          ; clk         ; 0.000        ; 0.469      ; 1.134      ;
+; 0.496 ; random_number_generator:rand|lfsr[4]   ; random_number_generator:rand|lfsr[5]           ; clk          ; clk         ; 0.000        ; 0.071      ; 0.738      ;
+; 0.497 ; random_number_generator:rand|lfsr[1]   ; random_number_generator:rand|lfsr[2]           ; clk          ; clk         ; 0.000        ; 0.071      ; 0.739      ;
+; 0.507 ; random_number_generator:rand|lfsr[22]  ; random_number_generator:rand|lfsr[23]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.749      ;
+; 0.507 ; random_number_generator:rand|lfsr[20]  ; random_number_generator:rand|lfsr[21]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.749      ;
+; 0.508 ; random_number_generator:rand|lfsr[54]  ; random_number_generator:rand|lfsr[55]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.749      ;
+; 0.508 ; random_number_generator:rand|lfsr[33]  ; random_number_generator:rand|lfsr[34]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.508 ; random_number_generator:rand|lfsr[32]  ; random_number_generator:rand|lfsr[33]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.508 ; random_number_generator:rand|lfsr[29]  ; random_number_generator:rand|lfsr[30]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.508 ; random_number_generator:rand|lfsr[25]  ; random_number_generator:rand|lfsr[26]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.508 ; random_number_generator:rand|lfsr[16]  ; random_number_generator:rand|lfsr[17]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.508 ; random_number_generator:rand|lfsr[117] ; random_number_generator:rand|lfsr[118]         ; clk          ; clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.508 ; random_number_generator:rand|lfsr[98]  ; random_number_generator:rand|lfsr[99]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.508 ; random_number_generator:rand|lfsr[90]  ; random_number_generator:rand|lfsr[91]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.508 ; random_number_generator:rand|lfsr[86]  ; random_number_generator:rand|lfsr[87]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.749      ;
+; 0.509 ; random_number_generator:rand|lfsr[49]  ; random_number_generator:rand|lfsr[50]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; random_number_generator:rand|lfsr[44]  ; random_number_generator:rand|lfsr[45]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; random_number_generator:rand|lfsr[41]  ; random_number_generator:rand|lfsr[42]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; random_number_generator:rand|lfsr[38]  ; random_number_generator:rand|lfsr[39]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; random_number_generator:rand|lfsr[36]  ; random_number_generator:rand|lfsr[37]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; random_number_generator:rand|lfsr[18]  ; random_number_generator:rand|lfsr[19]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.751      ;
+; 0.509 ; random_number_generator:rand|lfsr[15]  ; random_number_generator:rand|lfsr[16]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.751      ;
+; 0.509 ; random_number_generator:rand|lfsr[106] ; random_number_generator:rand|lfsr[107]         ; clk          ; clk         ; 0.000        ; 0.071      ; 0.751      ;
+; 0.509 ; random_number_generator:rand|lfsr[104] ; random_number_generator:rand|lfsr[105]         ; clk          ; clk         ; 0.000        ; 0.071      ; 0.751      ;
+; 0.509 ; random_number_generator:rand|lfsr[101] ; random_number_generator:rand|lfsr[102]         ; clk          ; clk         ; 0.000        ; 0.071      ; 0.751      ;
+; 0.510 ; random_number_generator:rand|lfsr[96]  ; random_number_generator:rand|lfsr[97]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.752      ;
+; 0.510 ; random_number_generator:rand|lfsr[48]  ; random_number_generator:rand|lfsr[49]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.510 ; random_number_generator:rand|lfsr[19]  ; random_number_generator:rand|lfsr[20]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.752      ;
+; 0.510 ; random_number_generator:rand|lfsr[103] ; random_number_generator:rand|lfsr[104]         ; clk          ; clk         ; 0.000        ; 0.071      ; 0.752      ;
+; 0.510 ; random_number_generator:rand|lfsr[100] ; random_number_generator:rand|lfsr[101]         ; clk          ; clk         ; 0.000        ; 0.071      ; 0.752      ;
+; 0.510 ; random_number_generator:rand|lfsr[82]  ; random_number_generator:rand|lfsr[83]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.511 ; random_number_generator:rand|lfsr[46]  ; random_number_generator:rand|lfsr[47]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.752      ;
+; 0.511 ; random_number_generator:rand|lfsr[40]  ; random_number_generator:rand|lfsr[41]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.752      ;
+; 0.511 ; random_number_generator:rand|lfsr[24]  ; random_number_generator:rand|lfsr[25]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.753      ;
+; 0.511 ; random_number_generator:rand|lfsr[85]  ; random_number_generator:rand|lfsr[86]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.752      ;
+; 0.511 ; random_number_generator:rand|lfsr[80]  ; random_number_generator:rand|lfsr[81]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.752      ;
+; 0.511 ; random_number_generator:rand|lfsr[79]  ; random_number_generator:rand|lfsr[80]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.752      ;
+; 0.512 ; random_number_generator:rand|lfsr[84]  ; random_number_generator:rand|lfsr[85]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.753      ;
+; 0.516 ; random_number_generator:rand|lfsr[71]  ; random_number_generator:rand|lfsr[72]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.757      ;
+; 0.517 ; random_number_generator:rand|lfsr[67]  ; random_number_generator:rand|lfsr[68]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.758      ;
+; 0.518 ; random_number_generator:rand|lfsr[66]  ; random_number_generator:rand|lfsr[67]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.759      ;
+; 0.537 ; count2[3]                              ; S.ROUND_INCR                                   ; clk          ; clk         ; 0.000        ; 0.070      ; 0.778      ;
+; 0.556 ; random_number_generator:rand|lfsr[67]  ; random_number_generator:rand|random_number[8]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.797      ;
+; 0.557 ; random_number_generator:rand|lfsr[66]  ; random_number_generator:rand|random_number[7]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.798      ;
+; 0.559 ; random_number_generator:rand|lfsr[71]  ; random_number_generator:rand|random_number[12] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.800      ;
+; 0.564 ; timer[1]                               ; timer[1]                                       ; clk          ; clk         ; 0.000        ; 0.086      ; 0.821      ;
+; 0.566 ; timer[4]                               ; timer[4]                                       ; clk          ; clk         ; 0.000        ; 0.086      ; 0.823      ;
+; 0.573 ; S.DELAY_OFF                            ; S.FOR_COND_COUNT                               ; clk          ; clk         ; 0.000        ; 0.086      ; 0.830      ;
+; 0.581 ; timer[3]                               ; timer[3]                                       ; clk          ; clk         ; 0.000        ; 0.070      ; 0.822      ;
+; 0.583 ; random_number_generator:rand|lfsr[34]  ; random_number_generator:rand|lfsr[35]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.825      ;
+; 0.583 ; random_number_generator:rand|lfsr[14]  ; random_number_generator:rand|lfsr[15]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.825      ;
+; 0.583 ; random_number_generator:rand|lfsr[13]  ; random_number_generator:rand|lfsr[14]          ; clk          ; clk         ; 0.000        ; 0.071      ; 0.825      ;
+; 0.583 ; random_number_generator:rand|lfsr[8]   ; random_number_generator:rand|lfsr[9]           ; clk          ; clk         ; 0.000        ; 0.071      ; 0.825      ;
+; 0.583 ; random_number_generator:rand|lfsr[115] ; random_number_generator:rand|lfsr[116]         ; clk          ; clk         ; 0.000        ; 0.071      ; 0.825      ;
+; 0.583 ; random_number_generator:rand|lfsr[114] ; random_number_generator:rand|lfsr[115]         ; clk          ; clk         ; 0.000        ; 0.071      ; 0.825      ;
+; 0.583 ; random_number_generator:rand|lfsr[105] ; random_number_generator:rand|lfsr[106]         ; clk          ; clk         ; 0.000        ; 0.071      ; 0.825      ;
+; 0.584 ; random_number_generator:rand|lfsr[59]  ; random_number_generator:rand|random_number[0]  ; clk          ; clk         ; 0.000        ; 0.069      ; 0.824      ;
+; 0.584 ; random_number_generator:rand|lfsr[52]  ; random_number_generator:rand|lfsr[53]          ; clk          ; clk         ; 0.000        ; 0.070      ; 0.825      ;
++-------+----------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -1.119 ; -48.283           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.175 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -253.617                        ;
++-------+--------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                        ;
++--------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node           ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
+; -1.119 ; difficulty_time[10] ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.159      ; 2.265      ;
+; -1.116 ; difficulty_time[10] ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.159      ; 2.262      ;
+; -1.108 ; difficulty_time[10] ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.159      ; 2.254      ;
+; -1.105 ; difficulty_time[10] ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.159      ; 2.251      ;
+; -1.093 ; S.FOR_COND_COUNT    ; pass                ; clk          ; clk         ; 1.000        ; -0.252     ; 1.828      ;
+; -1.092 ; timer[5]            ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.159      ; 2.238      ;
+; -1.089 ; timer[5]            ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.159      ; 2.235      ;
+; -1.081 ; timer[5]            ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.159      ; 2.227      ;
+; -1.078 ; timer[5]            ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.159      ; 2.224      ;
+; -1.007 ; S.FOR_COND_COUNT    ; gameDisplay[1]~reg0 ; clk          ; clk         ; 1.000        ; -0.058     ; 1.936      ;
+; -1.003 ; count[1]            ; gameDisplay[2]~reg0 ; clk          ; clk         ; 1.000        ; 0.157      ; 2.147      ;
+; -0.998 ; count2[3]           ; pass                ; clk          ; clk         ; 1.000        ; -0.045     ; 1.940      ;
+; -0.955 ; count2[1]           ; pass                ; clk          ; clk         ; 1.000        ; -0.045     ; 1.897      ;
+; -0.953 ; count[1]            ; gameDisplay[0]~reg0 ; clk          ; clk         ; 1.000        ; 0.156      ; 2.096      ;
+; -0.944 ; S.FOR_COND_COUNT    ; timer[27]           ; clk          ; clk         ; 1.000        ; -0.239     ; 1.692      ;
+; -0.944 ; S.FOR_COND_COUNT    ; timer[26]           ; clk          ; clk         ; 1.000        ; -0.239     ; 1.692      ;
+; -0.944 ; S.FOR_COND_COUNT    ; timer[16]           ; clk          ; clk         ; 1.000        ; -0.239     ; 1.692      ;
+; -0.944 ; S.FOR_COND_COUNT    ; timer[14]           ; clk          ; clk         ; 1.000        ; -0.239     ; 1.692      ;
+; -0.944 ; S.FOR_COND_COUNT    ; timer[15]           ; clk          ; clk         ; 1.000        ; -0.239     ; 1.692      ;
+; -0.944 ; S.FOR_COND_COUNT    ; timer[18]           ; clk          ; clk         ; 1.000        ; -0.239     ; 1.692      ;
+; -0.944 ; S.FOR_COND_COUNT    ; timer[17]           ; clk          ; clk         ; 1.000        ; -0.239     ; 1.692      ;
+; -0.944 ; S.FOR_COND_COUNT    ; timer[19]           ; clk          ; clk         ; 1.000        ; -0.239     ; 1.692      ;
+; -0.944 ; S.FOR_COND_COUNT    ; timer[20]           ; clk          ; clk         ; 1.000        ; -0.239     ; 1.692      ;
+; -0.944 ; S.FOR_COND_COUNT    ; timer[24]           ; clk          ; clk         ; 1.000        ; -0.239     ; 1.692      ;
+; -0.944 ; S.FOR_COND_COUNT    ; timer[21]           ; clk          ; clk         ; 1.000        ; -0.239     ; 1.692      ;
+; -0.944 ; S.FOR_COND_COUNT    ; timer[22]           ; clk          ; clk         ; 1.000        ; -0.239     ; 1.692      ;
+; -0.944 ; S.FOR_COND_COUNT    ; timer[23]           ; clk          ; clk         ; 1.000        ; -0.239     ; 1.692      ;
+; -0.944 ; S.FOR_COND_COUNT    ; timer[25]           ; clk          ; clk         ; 1.000        ; -0.239     ; 1.692      ;
+; -0.943 ; S.FOR_COND_COUNT    ; timer[6]            ; clk          ; clk         ; 1.000        ; -0.246     ; 1.684      ;
+; -0.943 ; S.FOR_COND_COUNT    ; timer[2]            ; clk          ; clk         ; 1.000        ; -0.246     ; 1.684      ;
+; -0.943 ; S.FOR_COND_COUNT    ; timer[3]            ; clk          ; clk         ; 1.000        ; -0.246     ; 1.684      ;
+; -0.943 ; S.FOR_COND_COUNT    ; timer[5]            ; clk          ; clk         ; 1.000        ; -0.246     ; 1.684      ;
+; -0.943 ; S.FOR_COND_COUNT    ; timer[7]            ; clk          ; clk         ; 1.000        ; -0.246     ; 1.684      ;
+; -0.943 ; S.FOR_COND_COUNT    ; timer[9]            ; clk          ; clk         ; 1.000        ; -0.246     ; 1.684      ;
+; -0.943 ; S.FOR_COND_COUNT    ; timer[8]            ; clk          ; clk         ; 1.000        ; -0.246     ; 1.684      ;
+; -0.943 ; S.FOR_COND_COUNT    ; timer[10]           ; clk          ; clk         ; 1.000        ; -0.246     ; 1.684      ;
+; -0.943 ; S.FOR_COND_COUNT    ; timer[11]           ; clk          ; clk         ; 1.000        ; -0.246     ; 1.684      ;
+; -0.943 ; S.FOR_COND_COUNT    ; timer[12]           ; clk          ; clk         ; 1.000        ; -0.246     ; 1.684      ;
+; -0.934 ; count[2]            ; gameDisplay[2]~reg0 ; clk          ; clk         ; 1.000        ; 0.157      ; 2.078      ;
+; -0.921 ; timer[6]            ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.159      ; 2.067      ;
+; -0.918 ; timer[6]            ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.159      ; 2.064      ;
+; -0.918 ; count2[2]           ; pass                ; clk          ; clk         ; 1.000        ; -0.045     ; 1.860      ;
+; -0.915 ; timer[7]            ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.159      ; 2.061      ;
+; -0.912 ; timer[7]            ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.159      ; 2.058      ;
+; -0.910 ; timer[6]            ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.159      ; 2.056      ;
+; -0.907 ; timer[6]            ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.159      ; 2.053      ;
+; -0.904 ; timer[7]            ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.159      ; 2.050      ;
+; -0.901 ; timer[7]            ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.159      ; 2.047      ;
+; -0.889 ; timer[1]            ; timer[27]           ; clk          ; clk         ; 1.000        ; -0.236     ; 1.640      ;
+; -0.885 ; timer[1]            ; timer[26]           ; clk          ; clk         ; 1.000        ; -0.236     ; 1.636      ;
+; -0.881 ; round6Display[0]    ; pass                ; clk          ; clk         ; 1.000        ; -0.038     ; 1.830      ;
+; -0.880 ; timer[25]           ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.151      ; 2.018      ;
+; -0.878 ; S.FOR_COND_COUNT    ; count[3]            ; clk          ; clk         ; 1.000        ; -0.254     ; 1.611      ;
+; -0.878 ; timer[0]            ; timer[27]           ; clk          ; clk         ; 1.000        ; -0.236     ; 1.629      ;
+; -0.877 ; timer[25]           ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.151      ; 2.015      ;
+; -0.875 ; S.FOR_COND_COUNT    ; count[1]            ; clk          ; clk         ; 1.000        ; -0.254     ; 1.608      ;
+; -0.873 ; S.FOR_COND_COUNT    ; count[2]            ; clk          ; clk         ; 1.000        ; -0.254     ; 1.606      ;
+; -0.869 ; timer[25]           ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.151      ; 2.007      ;
+; -0.868 ; count[2]            ; gameDisplay[0]~reg0 ; clk          ; clk         ; 1.000        ; 0.156      ; 2.011      ;
+; -0.867 ; S.FOR_COND_COUNT    ; gameDisplay[2]~reg0 ; clk          ; clk         ; 1.000        ; -0.058     ; 1.796      ;
+; -0.866 ; timer[25]           ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.151      ; 2.004      ;
+; -0.865 ; difficulty_time[25] ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.159      ; 2.011      ;
+; -0.863 ; count[0]            ; gameDisplay[1]~reg0 ; clk          ; clk         ; 1.000        ; 0.157      ; 2.007      ;
+; -0.863 ; count2[0]           ; pass                ; clk          ; clk         ; 1.000        ; -0.045     ; 1.805      ;
+; -0.862 ; difficulty_time[25] ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.159      ; 2.008      ;
+; -0.857 ; difficulty_time[16] ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.159      ; 2.003      ;
+; -0.854 ; difficulty_time[16] ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.159      ; 2.000      ;
+; -0.854 ; difficulty_time[25] ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.159      ; 2.000      ;
+; -0.851 ; round4Display[1]    ; gameDisplay[2]~reg0 ; clk          ; clk         ; 1.000        ; 0.156      ; 1.994      ;
+; -0.851 ; difficulty_time[25] ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.159      ; 1.997      ;
+; -0.850 ; difficulty_time[6]  ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.159      ; 1.996      ;
+; -0.847 ; difficulty_time[6]  ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.159      ; 1.993      ;
+; -0.846 ; difficulty_time[16] ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.159      ; 1.992      ;
+; -0.843 ; difficulty_time[16] ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.159      ; 1.989      ;
+; -0.840 ; timer[0]            ; timer[26]           ; clk          ; clk         ; 1.000        ; -0.236     ; 1.591      ;
+; -0.839 ; difficulty_time[6]  ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.159      ; 1.985      ;
+; -0.836 ; difficulty_time[6]  ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.159      ; 1.982      ;
+; -0.828 ; round4Display[1]    ; pass                ; clk          ; clk         ; 1.000        ; -0.038     ; 1.777      ;
+; -0.825 ; round5Display[0]    ; pass                ; clk          ; clk         ; 1.000        ; -0.038     ; 1.774      ;
+; -0.821 ; timer[1]            ; timer[25]           ; clk          ; clk         ; 1.000        ; -0.236     ; 1.572      ;
+; -0.817 ; timer[1]            ; timer[24]           ; clk          ; clk         ; 1.000        ; -0.236     ; 1.568      ;
+; -0.813 ; timer[22]           ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.151      ; 1.951      ;
+; -0.810 ; timer[22]           ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.151      ; 1.948      ;
+; -0.810 ; timer[0]            ; timer[25]           ; clk          ; clk         ; 1.000        ; -0.236     ; 1.561      ;
+; -0.804 ; count[0]            ; gameDisplay[0]~reg0 ; clk          ; clk         ; 1.000        ; 0.156      ; 1.947      ;
+; -0.802 ; timer[22]           ; S.FOR_COND_COUNT    ; clk          ; clk         ; 1.000        ; 0.151      ; 1.940      ;
+; -0.799 ; timer[22]           ; S.DISPLAY_OFF       ; clk          ; clk         ; 1.000        ; 0.151      ; 1.937      ;
+; -0.796 ; S.FOR_COND_COUNT    ; roundNumb[0]~reg0   ; clk          ; clk         ; 1.000        ; -0.254     ; 1.529      ;
+; -0.795 ; S.FOR_COND_COUNT    ; roundNumb[1]~reg0   ; clk          ; clk         ; 1.000        ; -0.254     ; 1.528      ;
+; -0.793 ; S.FOR_COND_COUNT    ; roundNumb[2]~reg0   ; clk          ; clk         ; 1.000        ; -0.254     ; 1.526      ;
+; -0.793 ; S.FOR_COND_COUNT    ; roundNumb[3]~reg0   ; clk          ; clk         ; 1.000        ; -0.254     ; 1.526      ;
+; -0.792 ; S.ROUND_BEGIN       ; pass                ; clk          ; clk         ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; count[0]            ; gameDisplay[2]~reg0 ; clk          ; clk         ; 1.000        ; 0.157      ; 1.936      ;
+; -0.790 ; round4Display[0]    ; pass                ; clk          ; clk         ; 1.000        ; -0.038     ; 1.739      ;
+; -0.785 ; roundNumb[0]~reg0   ; S.ROUND_INCR        ; clk          ; clk         ; 1.000        ; -0.031     ; 1.741      ;
+; -0.782 ; difficulty_time[14] ; S.DELAY_OFF         ; clk          ; clk         ; 1.000        ; 0.152      ; 1.921      ;
+; -0.779 ; difficulty_time[14] ; S.DELAY             ; clk          ; clk         ; 1.000        ; 0.152      ; 1.918      ;
+; -0.776 ; round4Display[0]    ; gameDisplay[0]~reg0 ; clk          ; clk         ; 1.000        ; 0.155      ; 1.918      ;
+; -0.774 ; S.FOR_COND_COUNT    ; gameDisplay[0]~reg0 ; clk          ; clk         ; 1.000        ; -0.059     ; 1.702      ;
+; -0.772 ; timer[0]            ; timer[24]           ; clk          ; clk         ; 1.000        ; -0.236     ; 1.523      ;
++--------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                      ;
++-------+----------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                              ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.175 ; gameDisplay[2]~reg0                    ; gameDisplay[2]~reg0                            ; clk          ; clk         ; 0.000        ; 0.048      ; 0.307      ;
+; 0.175 ; S.DELAY_OFF                            ; S.DELAY_OFF                                    ; clk          ; clk         ; 0.000        ; 0.048      ; 0.307      ;
+; 0.175 ; S.DELAY                                ; S.DELAY                                        ; clk          ; clk         ; 0.000        ; 0.048      ; 0.307      ;
+; 0.176 ; gameDisplay[0]~reg0                    ; gameDisplay[0]~reg0                            ; clk          ; clk         ; 0.000        ; 0.047      ; 0.307      ;
+; 0.183 ; done~reg0                              ; done~reg0                                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
+; 0.183 ; S.GUESS_CHECK                          ; S.GUESS_CHECK                                  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
+; 0.183 ; S.MAKE_GUESS                           ; S.MAKE_GUESS                                   ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
+; 0.183 ; S.INIT                                 ; S.INIT                                         ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
+; 0.183 ; S.START                                ; S.START                                        ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
+; 0.184 ; count[0]                               ; count[0]                                       ; clk          ; clk         ; 0.000        ; 0.039      ; 0.307      ;
+; 0.184 ; count[3]                               ; count[3]                                       ; clk          ; clk         ; 0.000        ; 0.039      ; 0.307      ;
+; 0.184 ; count[1]                               ; count[1]                                       ; clk          ; clk         ; 0.000        ; 0.039      ; 0.307      ;
+; 0.184 ; count[2]                               ; count[2]                                       ; clk          ; clk         ; 0.000        ; 0.039      ; 0.307      ;
+; 0.184 ; count2[3]                              ; count2[3]                                      ; clk          ; clk         ; 0.000        ; 0.039      ; 0.307      ;
+; 0.184 ; count2[1]                              ; count2[1]                                      ; clk          ; clk         ; 0.000        ; 0.039      ; 0.307      ;
+; 0.184 ; count2[0]                              ; count2[0]                                      ; clk          ; clk         ; 0.000        ; 0.039      ; 0.307      ;
+; 0.184 ; count2[2]                              ; count2[2]                                      ; clk          ; clk         ; 0.000        ; 0.039      ; 0.307      ;
+; 0.184 ; roundNumb[2]~reg0                      ; roundNumb[2]~reg0                              ; clk          ; clk         ; 0.000        ; 0.039      ; 0.307      ;
+; 0.184 ; roundNumb[3]~reg0                      ; roundNumb[3]~reg0                              ; clk          ; clk         ; 0.000        ; 0.039      ; 0.307      ;
+; 0.184 ; roundNumb[0]~reg0                      ; roundNumb[0]~reg0                              ; clk          ; clk         ; 0.000        ; 0.039      ; 0.307      ;
+; 0.184 ; roundNumb[1]~reg0                      ; roundNumb[1]~reg0                              ; clk          ; clk         ; 0.000        ; 0.039      ; 0.307      ;
+; 0.184 ; S.ROUND_BEGIN                          ; S.ROUND_BEGIN                                  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.307      ;
+; 0.189 ; random_number_generator:rand|lfsr[43]  ; random_number_generator:rand|lfsr[44]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.313      ;
+; 0.190 ; random_number_generator:rand|lfsr[63]  ; random_number_generator:rand|random_number[4]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.314      ;
+; 0.194 ; random_number_generator:rand|lfsr[60]  ; random_number_generator:rand|random_number[1]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.318      ;
+; 0.195 ; random_number_generator:rand|lfsr[78]  ; random_number_generator:rand|random_number[19] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.318      ;
+; 0.195 ; random_number_generator:rand|lfsr[75]  ; random_number_generator:rand|random_number[16] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.318      ;
+; 0.196 ; random_number_generator:rand|lfsr[69]  ; random_number_generator:rand|random_number[10] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.319      ;
+; 0.196 ; random_number_generator:rand|lfsr[65]  ; random_number_generator:rand|random_number[6]  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.319      ;
+; 0.196 ; random_number_generator:rand|lfsr[76]  ; random_number_generator:rand|random_number[17] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.319      ;
+; 0.197 ; random_number_generator:rand|lfsr[70]  ; random_number_generator:rand|random_number[11] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.320      ;
+; 0.197 ; random_number_generator:rand|lfsr[68]  ; random_number_generator:rand|random_number[9]  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.320      ;
+; 0.197 ; random_number_generator:rand|lfsr[77]  ; random_number_generator:rand|random_number[18] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.320      ;
+; 0.197 ; random_number_generator:rand|lfsr[74]  ; random_number_generator:rand|random_number[15] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.320      ;
+; 0.198 ; random_number_generator:rand|lfsr[73]  ; random_number_generator:rand|random_number[14] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.321      ;
+; 0.201 ; random_number_generator:rand|lfsr[0]   ; random_number_generator:rand|lfsr[1]           ; clk          ; clk         ; 0.000        ; 0.040      ; 0.325      ;
+; 0.203 ; random_number_generator:rand|lfsr[62]  ; random_number_generator:rand|random_number[3]  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.326      ;
+; 0.203 ; random_number_generator:rand|lfsr[61]  ; random_number_generator:rand|random_number[2]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.327      ;
+; 0.213 ; S.RESET                                ; done~reg0                                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.337      ;
+; 0.235 ; timer[3]                               ; timer[4]                                       ; clk          ; clk         ; 0.000        ; 0.243      ; 0.562      ;
+; 0.240 ; S.DELAY                                ; S.DISPLAY_OFF                                  ; clk          ; clk         ; 0.000        ; 0.048      ; 0.372      ;
+; 0.248 ; random_number_generator:rand|lfsr[33]  ; random_number_generator:rand|lfsr[34]          ; clk          ; clk         ; 0.000        ; 0.041      ; 0.373      ;
+; 0.248 ; random_number_generator:rand|lfsr[32]  ; random_number_generator:rand|lfsr[33]          ; clk          ; clk         ; 0.000        ; 0.041      ; 0.373      ;
+; 0.248 ; random_number_generator:rand|lfsr[20]  ; random_number_generator:rand|lfsr[21]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.372      ;
+; 0.248 ; random_number_generator:rand|lfsr[86]  ; random_number_generator:rand|lfsr[87]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.372      ;
+; 0.249 ; random_number_generator:rand|lfsr[41]  ; random_number_generator:rand|lfsr[42]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; random_number_generator:rand|lfsr[38]  ; random_number_generator:rand|lfsr[39]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; random_number_generator:rand|lfsr[36]  ; random_number_generator:rand|lfsr[37]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; random_number_generator:rand|lfsr[29]  ; random_number_generator:rand|lfsr[30]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; random_number_generator:rand|lfsr[25]  ; random_number_generator:rand|lfsr[26]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; random_number_generator:rand|lfsr[22]  ; random_number_generator:rand|lfsr[23]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; random_number_generator:rand|lfsr[18]  ; random_number_generator:rand|lfsr[19]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; random_number_generator:rand|lfsr[16]  ; random_number_generator:rand|lfsr[17]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; random_number_generator:rand|lfsr[117] ; random_number_generator:rand|lfsr[118]         ; clk          ; clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; random_number_generator:rand|lfsr[106] ; random_number_generator:rand|lfsr[107]         ; clk          ; clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; random_number_generator:rand|lfsr[98]  ; random_number_generator:rand|lfsr[99]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; random_number_generator:rand|lfsr[90]  ; random_number_generator:rand|lfsr[91]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; timer[2]                               ; timer[4]                                       ; clk          ; clk         ; 0.000        ; 0.243      ; 0.576      ;
+; 0.250 ; random_number_generator:rand|lfsr[54]  ; random_number_generator:rand|lfsr[55]          ; clk          ; clk         ; 0.000        ; 0.039      ; 0.373      ;
+; 0.250 ; random_number_generator:rand|lfsr[49]  ; random_number_generator:rand|lfsr[50]          ; clk          ; clk         ; 0.000        ; 0.039      ; 0.373      ;
+; 0.250 ; random_number_generator:rand|lfsr[48]  ; random_number_generator:rand|lfsr[49]          ; clk          ; clk         ; 0.000        ; 0.039      ; 0.373      ;
+; 0.250 ; random_number_generator:rand|lfsr[44]  ; random_number_generator:rand|lfsr[45]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; random_number_generator:rand|lfsr[15]  ; random_number_generator:rand|lfsr[16]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; random_number_generator:rand|lfsr[4]   ; random_number_generator:rand|lfsr[5]           ; clk          ; clk         ; 0.000        ; 0.041      ; 0.375      ;
+; 0.250 ; random_number_generator:rand|lfsr[104] ; random_number_generator:rand|lfsr[105]         ; clk          ; clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; random_number_generator:rand|lfsr[101] ; random_number_generator:rand|lfsr[102]         ; clk          ; clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; random_number_generator:rand|lfsr[82]  ; random_number_generator:rand|lfsr[83]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.251 ; random_number_generator:rand|lfsr[96]  ; random_number_generator:rand|lfsr[97]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; random_number_generator:rand|lfsr[40]  ; random_number_generator:rand|lfsr[41]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; random_number_generator:rand|lfsr[19]  ; random_number_generator:rand|lfsr[20]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; random_number_generator:rand|lfsr[103] ; random_number_generator:rand|lfsr[104]         ; clk          ; clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; random_number_generator:rand|lfsr[100] ; random_number_generator:rand|lfsr[101]         ; clk          ; clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; random_number_generator:rand|lfsr[85]  ; random_number_generator:rand|lfsr[86]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.252 ; random_number_generator:rand|lfsr[46]  ; random_number_generator:rand|lfsr[47]          ; clk          ; clk         ; 0.000        ; 0.039      ; 0.375      ;
+; 0.252 ; random_number_generator:rand|lfsr[24]  ; random_number_generator:rand|lfsr[25]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.376      ;
+; 0.252 ; random_number_generator:rand|lfsr[1]   ; random_number_generator:rand|lfsr[2]           ; clk          ; clk         ; 0.000        ; 0.040      ; 0.376      ;
+; 0.252 ; random_number_generator:rand|lfsr[84]  ; random_number_generator:rand|lfsr[85]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.376      ;
+; 0.252 ; random_number_generator:rand|lfsr[80]  ; random_number_generator:rand|lfsr[81]          ; clk          ; clk         ; 0.000        ; 0.039      ; 0.375      ;
+; 0.252 ; random_number_generator:rand|lfsr[79]  ; random_number_generator:rand|lfsr[80]          ; clk          ; clk         ; 0.000        ; 0.039      ; 0.375      ;
+; 0.256 ; random_number_generator:rand|lfsr[67]  ; random_number_generator:rand|lfsr[68]          ; clk          ; clk         ; 0.000        ; 0.039      ; 0.379      ;
+; 0.256 ; random_number_generator:rand|lfsr[71]  ; random_number_generator:rand|lfsr[72]          ; clk          ; clk         ; 0.000        ; 0.039      ; 0.379      ;
+; 0.257 ; timer[12]                              ; timer[13]                                      ; clk          ; clk         ; 0.000        ; 0.243      ; 0.584      ;
+; 0.257 ; random_number_generator:rand|lfsr[66]  ; random_number_generator:rand|lfsr[67]          ; clk          ; clk         ; 0.000        ; 0.039      ; 0.380      ;
+; 0.268 ; count2[3]                              ; S.ROUND_INCR                                   ; clk          ; clk         ; 0.000        ; 0.039      ; 0.391      ;
+; 0.268 ; random_number_generator:rand|lfsr[67]  ; random_number_generator:rand|random_number[8]  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.391      ;
+; 0.269 ; random_number_generator:rand|lfsr[66]  ; random_number_generator:rand|random_number[7]  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.392      ;
+; 0.271 ; random_number_generator:rand|lfsr[71]  ; random_number_generator:rand|random_number[12] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.394      ;
+; 0.273 ; random_number_generator:rand|lfsr[59]  ; random_number_generator:rand|random_number[0]  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.396      ;
+; 0.281 ; timer[1]                               ; timer[1]                                       ; clk          ; clk         ; 0.000        ; 0.048      ; 0.413      ;
+; 0.282 ; timer[4]                               ; timer[4]                                       ; clk          ; clk         ; 0.000        ; 0.048      ; 0.414      ;
+; 0.284 ; S.DELAY_OFF                            ; S.FOR_COND_COUNT                               ; clk          ; clk         ; 0.000        ; 0.048      ; 0.416      ;
+; 0.289 ; count[3]                               ; S.GUESSING                                     ; clk          ; clk         ; 0.000        ; 0.039      ; 0.412      ;
+; 0.289 ; random_number_generator:rand|lfsr[34]  ; random_number_generator:rand|lfsr[35]          ; clk          ; clk         ; 0.000        ; 0.041      ; 0.414      ;
+; 0.290 ; timer[3]                               ; timer[3]                                       ; clk          ; clk         ; 0.000        ; 0.039      ; 0.413      ;
+; 0.290 ; random_number_generator:rand|lfsr[21]  ; random_number_generator:rand|lfsr[22]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.414      ;
+; 0.290 ; random_number_generator:rand|lfsr[14]  ; random_number_generator:rand|lfsr[15]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.414      ;
+; 0.290 ; random_number_generator:rand|lfsr[13]  ; random_number_generator:rand|lfsr[14]          ; clk          ; clk         ; 0.000        ; 0.040      ; 0.414      ;
+; 0.290 ; random_number_generator:rand|lfsr[8]   ; random_number_generator:rand|lfsr[9]           ; clk          ; clk         ; 0.000        ; 0.040      ; 0.414      ;
+; 0.290 ; random_number_generator:rand|lfsr[6]   ; random_number_generator:rand|lfsr[7]           ; clk          ; clk         ; 0.000        ; 0.041      ; 0.415      ;
+; 0.290 ; random_number_generator:rand|lfsr[124] ; random_number_generator:rand|lfsr[125]         ; clk          ; clk         ; 0.000        ; 0.040      ; 0.414      ;
++-------+----------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.456   ; 0.175 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -3.456   ; 0.175 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -210.327 ; 0.0   ; 0.0      ; 0.0     ; -306.26             ;
+;  clk             ; -210.327 ; 0.000 ; N/A      ; N/A     ; -306.260            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                     ;
++----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin            ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; roundNumb[0]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; roundNumb[1]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; roundNumb[2]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; roundNumb[3]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; gameDisplay[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; gameDisplay[1] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; gameDisplay[2] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; done           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; start                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; initialize              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; startRound              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; submit                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; difficulty[0]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; difficulty[1]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; userGuess[2]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; userGuess[1]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; userGuess[0]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin            ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; roundNumb[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; roundNumb[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; roundNumb[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; roundNumb[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; gameDisplay[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; gameDisplay[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; gameDisplay[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; done           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin            ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; roundNumb[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; roundNumb[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; roundNumb[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; roundNumb[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; gameDisplay[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; gameDisplay[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; gameDisplay[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; done           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin            ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; roundNumb[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; roundNumb[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; roundNumb[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; roundNumb[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; gameDisplay[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; gameDisplay[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; gameDisplay[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; done           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 1802     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 1802     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 560   ; 560  ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                            ;
++---------------+--------------------------------------------------------------------------------------+
+; Input Port    ; Comment                                                                              ;
++---------------+--------------------------------------------------------------------------------------+
+; difficulty[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; difficulty[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; initialize    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; startRound    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; submit        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; userGuess[0]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; userGuess[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; userGuess[2]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+--------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                             ;
++----------------+---------------------------------------------------------------------------------------+
+; Output Port    ; Comment                                                                               ;
++----------------+---------------------------------------------------------------------------------------+
+; done           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; gameDisplay[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; gameDisplay[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; gameDisplay[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; roundNumb[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; roundNumb[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; roundNumb[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; roundNumb[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++----------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                            ;
++---------------+--------------------------------------------------------------------------------------+
+; Input Port    ; Comment                                                                              ;
++---------------+--------------------------------------------------------------------------------------+
+; difficulty[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; difficulty[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; initialize    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; startRound    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; submit        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; userGuess[0]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; userGuess[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; userGuess[2]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+--------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                             ;
++----------------+---------------------------------------------------------------------------------------+
+; Output Port    ; Comment                                                                               ;
++----------------+---------------------------------------------------------------------------------------+
+; done           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; gameDisplay[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; gameDisplay[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; gameDisplay[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; roundNumb[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; roundNumb[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; roundNumb[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; roundNumb[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++----------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Fri Dec 08 13:39:11 2023
+Info: Command: quartus_sta simon_says -c simon_says
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'simon_says.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.456
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.456            -210.327 clk 
+Info (332146): Worst-case hold slack is 0.387
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.387               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -306.260 clk 
+Info (332114): Report Metastability: Found 20 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.078
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.078            -174.177 clk 
+Info (332146): Worst-case hold slack is 0.340
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.340               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -306.260 clk 
+Info (332114): Report Metastability: Found 20 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.119
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.119             -48.283 clk 
+Info (332146): Worst-case hold slack is 0.175
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.175               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -253.617 clk 
+Info (332114): Report Metastability: Found 20 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4835 megabytes
+    Info: Processing ended: Fri Dec 08 13:39:15 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
+
+

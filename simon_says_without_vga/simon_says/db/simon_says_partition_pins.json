@@ -1,0 +1,85 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "roundNumb[0]",
+					"strict" : false
+				},
+				{
+					"name" : "roundNumb[1]",
+					"strict" : false
+				},
+				{
+					"name" : "roundNumb[2]",
+					"strict" : false
+				},
+				{
+					"name" : "roundNumb[3]",
+					"strict" : false
+				},
+				{
+					"name" : "gameDisplay[0]",
+					"strict" : false
+				},
+				{
+					"name" : "gameDisplay[1]",
+					"strict" : false
+				},
+				{
+					"name" : "gameDisplay[2]",
+					"strict" : false
+				},
+				{
+					"name" : "done",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "initialize",
+					"strict" : false
+				},
+				{
+					"name" : "startRound",
+					"strict" : false
+				},
+				{
+					"name" : "submit",
+					"strict" : false
+				},
+				{
+					"name" : "difficulty[0]",
+					"strict" : false
+				},
+				{
+					"name" : "difficulty[1]",
+					"strict" : false
+				},
+				{
+					"name" : "userGuess[2]",
+					"strict" : false
+				},
+				{
+					"name" : "userGuess[1]",
+					"strict" : false
+				},
+				{
+					"name" : "userGuess[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
