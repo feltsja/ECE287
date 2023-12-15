@@ -18,6 +18,10 @@ sim_says_with_vga . The are both self explanatory as one version will be able to
 will appear on the Red LEDs 0 through 2, and the other will have the same board state but will be updated to also use the
 VGA display to show the colors correlating with the sequence. Each version is just two files, the simon_says.v and random_number_generator.v .
 
+Each of the two folders include everything needed to properly run the game. So if you have a working FPGA with a VGA display and monitor, everything 
+included within the simon_says_with_vga folder will be enough to run the game, and if you want to play it without the VGA addition, the 
+other folder has everything included as well to run the game alone. 
+
 # How to play the game
 
 Although the pin assignment is explained at the top of the simon_says.v code, I will explain how the game is controlled here.
