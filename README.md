@@ -34,8 +34,8 @@ Although the pin assignment is explained at the top of the simon_says.v code, I 
   before moving on to the next one. Once you matched all the colours/numbers in the sequence, the round counter will increase and you can start
   the next round by pushing KEY[3] again until completing round 10.
 
-Upon completing round 10, or losing in a previous round, the game can then be reset by flipping down the start, initialize, and reset switches 
-(SW[17], SW[16], SW[13]). The steps can then be followed to play again, this time with a different random sequence and a different difficulty
+Upon completing round 10, or losing in a previous round, the game can then be reset by flipping down the start and initialize switches 
+(SW[16] and SW[13]). The steps can then be followed to play again, this time with a different random sequence and a different difficulty
  if chosen in the initialization step. 
 
 # Citations
