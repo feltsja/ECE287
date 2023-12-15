@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at simon_says.v(4): object "start" differs only in case from object "START" in the same scope File: M:/ECE 287/Final Project/finalized/simon_says/simon_says.v Line: 4
+Warning (10268): Verilog HDL information at random_number_generator.v(19): always construct contains both blocking and non-blocking assignments File: M:/ECE 287/Final Project/finalized/simon_says/random_number_generator.v Line: 19
