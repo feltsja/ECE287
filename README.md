@@ -42,4 +42,4 @@ Upon completing round 10, or losing in a previous round, the game can then be re
 
 * [Anthony Roberto & Maggie Mize](https://github.com/ece287/Simon-Says) - For insight on setting up the VGA as guidance
 * [Dom](https://www.youtube.com/watch?v=mR-eo7a4n5Q) - A Youtube video/creator that also helping with setting up the VGA
-* Dr. Jamieson - For the version of a random number generator that was modified to work as the random sequence creator
+* Dr. Jamieson - For the version of a random number generator that was modified to work as the random sequence creator and for the measurements to use within the VGA display
